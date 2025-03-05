@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>JUnit.</title>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<meta name="author" content="María del Mar Senra Martul." />
+<link rel="license" type="text/html" href="http://creativecommons.org/licenses/by-sa/4.0/" />
+<meta name="generator" content="eXeLearning 2.7 - exelearning.net" />
+<meta name="description" content="JUnit, probas unitarias." />
+<link rel="stylesheet" type="text/css" href="base.css" />
+<link rel="stylesheet" type="text/css" href="content.css" />
+<!--[if lt IE 9]><script type="text/javascript" src="exe_html5.js"></script><![endif]-->
+<script type="text/javascript" src="exe_jquery.js"></script>
+<script type="text/javascript" src="common_i18n.js"></script>
+<script type="text/javascript" src="common.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body class="exe-single-page"><script type="text/javascript">document.body.className+=" js"</script>
+<div id="content">
+<header id="header">
+<div id="headerContent">
+<h1>JUnit.</h1>
+</div>
+</header>
+<section id="main">
+<article class="node level-1-node" id="exe-node-0">
+<header class="nodeDecoration">
+<h1 id="exenode_0_JUNIT" class="nodeTitle">JUNIT</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id0-0">
+<div class="iDevice emphasis0">
+<div id="ta0_86" class="block iDevice_content">
+<p><img src="img0.11.png" width="196" height="119" alt="JUnit." title="JUnit." style="float: left; margin-right: 20px; margin-left: 20px;" />JUnit é un <span style="background-color: #ffcc99;"><strong>framework ou conxunto de clases Java que permiten ao programador construír e executar automaticamente casos de proba para métodos dunha clase Java</strong></span>.</p>
+<p>A gran vantaxe é que se escriben as probas e quedan gardadas no cartafol do proxecto, de modo que as <strong>modificacións</strong> feitas no código <strong>pódense probar sen ter que reescribir de novo as probas</strong>.</p>
+<p><span style="background-color: #ffcc99;"><em><strong>Escríbense unha vez, úsanse tantas como sexa necesario, por modificacións ou correccións de erros!</strong></em></span></p>
+<p>Os <strong>casos de proba:</strong></p>
+<ol>
+<li><strong>Quedan reflectidos</strong> en <strong>programas/clases Java</strong></li>
+<li>As clases <strong>quedan arquivadas asociadas ao proxecto/clase ao que corresponden</strong>.</li>
+<li><strong>Poden volver a executarse</strong> tantas veces como sexa necesario.</li>
+</ol>
+<p>Estes casos de proba<span style="background-color: #ffcc99;"><strong> permiten avaliar se a clase se comporta como se esperaba</strong></span>, é dicir, a partir duns valores de entrada, avalíase se o resultado obtido é o esperado.</p>
+<p>JUnit foi escrito por Erich Gamma e Kent Beck e é un produto de código aberto distribuído baixo unha licenza Common Public License - v 1.0. A páxina oficial de JUnit é : <a href="http://www.junit.org">www.junit.org</a>.</p>
+<p>Os IDE como <strong>NetBeans, JBuilder e Eclipse contan con complementos para utilizar JUnit</strong>, permitindo que o programador se centre na proba e no resultado esperado e deixe ao IDE a creación das clases que permiten a proba.</p>
+<p></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-1">
+<header class="nodeDecoration">
+<h1 id="exenode_1_XerarprobasenJUNIT" class="nodeTitle">Xerar probas en JUNIT.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id1-1">
+<div class="iDevice emphasis0">
+<div id="ta1_86" class="block iDevice_content">
+<p>En NetBeans pódense xerar tres tipos de probas: para probar os métodos dunha clase, un conxunto de probas para probar un conxunto de clases dun paquete ou un caso de probas JUnit baleiro.</p>
+<h2>Crear probas JUnit.</h2>
+<p>Para crear unha proba JUnit: </p>
+<ol>
+<li><span style="background-color: #ffcc99;"><strong>Seleccionar </strong></span>no menú principal<strong><span style="background-color: #ffcc99;"> Archivo/Archivo Nuevo/ Unit Tests</span> </strong></li>
+<li><span style="background-color: #ffcc99;"><strong>Escoller o tipo de arquivo</strong></span> de entre os posibles:
+<ul>
+<li><strong>JUnit Test</strong>que crea un caso de proba baleiro,</li>
+<li><strong>Test for Existing Class</strong> que crea un <strong>caso de proba para os métodos</strong> dunha clase e</li>
+<li><strong>Test Suite</strong> que crea<strong> probas para un paquete</strong> Java seleccionado. Dependendo do tipo de proba seleccionada, haberá que completar de forma diferente as seguintes ventás que aparecen.</li>
+<li><strong>Herramientas-&gt;Create/Update Tests</strong>. Neste caso, para crear as<strong> probas de clase:</strong>
+<ol>
+<li>Primeiro seleccionamos a clase ou package sobre o que se queren facer as probas</li>
+<li>Segundo, elixir no menú principal Herramientas-&gt;Create/Update Tests.</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<p><span style="background-color: #ffcc99;"><strong>Se non se creou anteriormente ningunha proba</strong></span> para ese proxecto, aparece a ventá<strong><span style="background-color: #ffcc99;"> Seleccionar la versión JUnit</span> </strong>para permitir elixir entre traballar coa versión 3 ou 4.<span style="background-color: #ffcc99;"><strong> Deixase seleccionada a versión 4</strong> </span>xa que inclúe á versión 3.</p>
+<p><img src="img0.png" width="308" height="206" alt="Escolla da versión de JUnit." title="Escolla da versión de JUnit." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>En calquera caso<em><strong> aparece unha ventá diferente se a proba é para unha clase ou para un paquete</strong></em>. Nos apartados seguintes só se contemplarán os casos de proba para unha clase e para un package.</p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-2">
+<header class="nodeDecoration">
+<h1 id="exenode_2_Paraunhaclase" class="nodeTitle">Para unha clase.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id2-2">
+<div class="iDevice emphasis0">
+<div id="ta2_86" class="block iDevice_content">
+<p><img src="img0.1.png" width="375" height="564" alt="Ventá de configuración Create Tests." title="Ventá de configuración Create Tests." style="float: right; margin-right: 10px; margin-left: 10px;" />De elixir no menú principal<span style="background-color: #ffcc99;"><strong> Herramientas-&gt;Create/Update Tests</strong></span>, aparecerá a <strong>ventá <span style="background-color: #ffcc99;">Create Tests</span></strong> na que hai que indicar:</p>
+<ul style="line-height: 2em;">
+<li><strong>O nome da clase de proba</strong> <em>(recoméndase deixar o nome por defecto: nome da clase a probar seguido de Test),</em></li>
+<li>A <strong>localización</strong> onde se gardará a proba (recoméndase deixar o valor por defecto)</li>
+<li>As <strong>características</strong> da xeración de código dividida en tres apartados:
+<ul>
+<li>Apartado <strong>Method Access Levels</strong> para indicar o nivel de acceso aos métodos de proba.</li>
+<li>Apartado <strong>Generated Code</strong> para indicar se a proba terá métodos para executarse antes de iniciar a proba (Test Initializer), despois de finalizar a proba (Test Finalizer) ou código exemplo para unha proba (Default Method Bodies).</li>
+<li>Apartado <strong>Generated Comments</strong> para indicar que as probas leven comentarios Javadoc e comentarios para suxerir como implementar os métodos de proba (Source Code Hints). Déixase todo seleccionado e prémese en OK.</li>
+</ul>
+</li>
+</ul>
+<h3>OLLO!! Posibles erros no arquivo xerado e sempre conxunto de probas incompleto.</h3>
+<p>O <strong>código que xera NetBeans</strong> é unha<strong> plantilla que contén casos de proba por defecto</strong>, perooooo hai que ter en conta que:</p>
+<ul>
+<li><strong>Pode conter erros</strong>, que haberá que identificar e resolver. Acostuman a ser erros sinxelos... chaves sen cerrar, ou cousiñas así pero, que non cunda o pánico.</li>
+<li><strong>Non inclúe todas as probas posibles</strong>. Pero, dado que xa sabemos deseñar casos de proba, poderemos editar o arquivo e engadir novos casos de proba, para un ou varios métodos da clase.</li>
+</ul>
+<h2>Exemplo.</h2>
+<p>Vemos como exemplo o código xerado para o método <em><strong>calcularDivision()</strong></em> contempla un só caso de proba (0/0=0).</p>
+<h3>A clase Division.</h3>
+<p><img src="img2.4.png" width="723" height="276" alt="Clase Division." title="Clase Division." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h3>A clase de probas DivisionTest.</h3>
+<p>Pódese:</p>
+<ul>
+<li>Modificar este método</li>
+<li>Engadir novos casos de proba ou</li>
+<li>Engadir outros métodos de proba.</li>
+</ul>
+<p><span style="background-color: #ffcc99;"><strong>NetBeans suxire borrar as dúas últimas liñas de código da anotación Test</strong></span>.</p>
+<p><strong><em>Pódense borrar ou comentar as liñas das anotacións agás a anotación Test</em> </strong><em><strong>e a<em>s li</em>ñas import correspondentes ás anotacións borradas, se é que non van a ser utilizadas</strong></em>.</p>
+<p><img src="img2.5.png" width="692" height="767" alt="Clase DivisionTest." title="Clase DivisionTest." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-3">
+<header class="nodeDecoration">
+<h1 id="exenode_3_Paraunpaquete" class="nodeTitle">Para un paquete.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id3-3">
+<div class="iDevice emphasis0">
+<div id="ta3_86" class="block iDevice_content">
+<p>De elixir no menú principal<span style="background-color: #ffcc99;"><strong> Archivo-&gt;Archivo Nuevo-&gt;Unit Tests-&gt;Test Suite</strong></span>, aparecerá a ventá <span style="background-color: #ffcc99;"><strong>New Test Suite</strong></span>, onde se dará:</p>
+<ol>
+<li><strong>Nome á clase de proba</strong>.</li>
+<li>Elixirase o <strong>proxecto a probar</strong>.</li>
+<li><strong>Package</strong>: indícase o paquete onde se vai gardar esta clase de proba do proxecto. <strong><span style="background-color: #ffcc99;">É importante ubicar todas as probas nun mesmo paquete para que se produza a integración deles</span></strong>, é dicir, se eu xa teño probas de clases, cando faga a clase de proba do proxecto, esas probas integraranse na clase de proba do proxecto automáticamente, sempre e cando ambas arquivos de proba estén no mesmo paquete.</li>
+<li>Premer <strong>Finish</strong>.</li>
+</ol>
+<p><img src="img2.8.png" width="721" height="536" alt="Clase de probas dun proxecto: NewTestSuite." title="Clase de probas dun proxecto: NewTestSuite." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h3>Exemplo.</h3>
+<p>Na ventá de edición pódese ver o código que por defecto xera NetBeans para a proba.</p>
+<p>Na liña 18 pódese ver que as clases de proba que xa existían (como neste exemplo a clase DivisionTest) están incluídas no conxunto de probas. Pódense engadir novas probas.</p>
+<p><img src="img1.4.png" width="574" height="508" alt="Proba dun paquete: Clase NewTestSuite." style="display: block; margin-left: auto; margin-right: auto;" title="Proba dun paquete: Clase NewTestSuite." /></p>
+<p><em> OLLO!!! A clase DivisionTest está incluída porque as dúas clases atópanse no mesmo paquete, senón daría erro ao incluíla.</em></p>
+<p><em><img src="img2.6.png" width="216" height="169" alt="Árbore de cartafoles do proxecto." style="display: block; margin-left: auto; margin-right: auto;" title="Árbore de cartafoles do proxecto." /></em></p>
+<p></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-4">
+<header class="nodeDecoration">
+<h1 id="exenode_4_Estructuradaproba" class="nodeTitle">Estructura da proba.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id4-4">
+<div class="iDevice emphasis0">
+<div id="ta4_86" class="block iDevice_content">
+<p>As anotacións, dunha versión de JUNIT a outra cambiaron, e o nome dos seus métodos asociados tamén. Vexamos o significado de cada unha delas:</p>
+<ul style="line-height: 2em;">
+<li>A <strong>anotación <span style="background-color: #ffcc99;">@BeforeClass/ @BeforeAll</span></strong><span style="background-color: #ffcc99;"> </span>no seu <strong>método asociado inclúese o que se quere </strong><span style="background-color: #ffcc99;"><strong> executar antes de empezar a proba de clase</strong></span>, é dicir, <span style="background-color: #ffcc99;"><strong>execútase unha soa vez</strong></span> e antes de empezar a execución dos métodos de proba. Pódese utilizar por exemplo para crear unha conexión cunha base de datos ou para definir/declarar recursos, variables de clase ou atributos que sexan iguais para tódalas probas.</li>
+<li>A <strong>anotación <span style="background-color: #ffcc99;">@AfterClass/@AfterAll</span></strong> no seu método asociado inclúese o que se quere <span style="background-color: #ffcc99;"><strong> executar ao finalizar a proba de clase, unha soa vez tamén</strong></span>. Pódese utilizar por exemplo para pechar a conexión coa base de datos realizada antes.</li>
+<li>A <strong>anotación<span style="background-color: #ffcc99;"> @Before/@BeforeEach</span></strong> no seu método asociado inclúese o que se quere  <span style="background-color: #ffcc99;"><strong>executar <span style="background-color: #ffcc99;"> a</span>ntes da execución de cada un dos métodos de proba</strong></span>, é dicir, execútase tantas veces como métodos de proba existan. Utilízase para inicializar  eses recursos, variables de clase ou atributos que sexan iguais para tódalas probas.</li>
+<li>A <strong>anotación <span style="background-color: #ffcc99;">@After/@AfterEach</span></strong> no seu método asociado inclúese o que se quere <span style="background-color: #ffcc99;"><strong>executar <span style="background-color: #ffcc99;">xusto despoi</span>s da execución de cada un dos métodos de proba</strong></span>.</li>
+<li>A <strong>anotación <span style="background-color: #ffcc99;">@Test</span></strong> marca cada método de <strong><span style="background-color: #ffcc99;">proba</span></strong>.</li>
+<li>O <strong>método <span style="background-color: #ffcc99;">assertEquals(resultadoEsperado, resultadoDaProba, diferenciaAdmitida)</span></strong>. <strong><em>É o aserto por defecto, aínda que pode haber outros</em></strong>. Neste método indicamos, para os valores dados:
+<ul>
+<li>Cal é o resultado que esperamos obter, o cal escribimos no primeiro argumento (resultado esperado)</li>
+<li>Cal é o resultado obtido, que será o segundo argumento, e onde se manda a execución do método que queremos probar (resultado obtido).</li>
+<li>Tamén podemos por unha diferencia admitida entre ambos, se os dous argumentos son reais, no terceiro argumento chamado valor delta. Este valor é un número real igual á máxima diferenza en valor absoluto entre o valor esperado e o actual para que a afirmación sexa un éxito.</li>
+</ul>
+</li>
+</ul>
+<h3>Exemplo.</h3>
+<p>Na proba para o método <strong>calcularDivision()</strong> utilizada de exemplo, pódese modificar o test para poder <strong>comprobar que a división entre 1 e 3 dá como resultado 0.33 cun valor delta de 1E-2</strong>. Se consideramos que o método calcularDivision(1,3) devolve 0.333, os valores esperados 0.34 e 0.33 serían equiparables ao valor real e o valor 0.32 non, xa que abs(0.333-0.33) &lt; 0.01, abs(0.333-0.34) &lt; 0.01 e abs(0.333-0.32) &gt; 0.01. O código do test podería ser:</p>
+<p><img src="img0.8.png" width="904" height="388" alt="Proba do método Division con resultado periódico." title="Proba do método Division con resultado periódico." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-5">
+<header class="nodeDecoration">
+<h1 id="exenode_5_Carpetaparaasprobas" class="nodeTitle">Carpeta para as probas.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id5-5">
+<div class="iDevice emphasis0">
+<div id="ta5_86" class="block iDevice_content">
+<p><img src="img0.3.png" width="427" height="302" alt="Estructura de cartafoles dun proxecto: fontes e probas." title="Estructura de cartafoles dun proxecto: fontes e probas." style="display: block; margin-left: auto; margin-right: auto; float: right;" /></p>
+<p>Nas ventás de arquivos e de proxectos poden verse a estrutura lóxica e física das carpetas nas que se gardan as probas JUnit.</p>
+<p>Pódense<strong> agregar outras carpetas de proba no cadro de diálogo de propiedades do proxecto</strong> pero tendo en conta que <em><strong><span style="background-color: #ffcc99;">os arquivos de proba, dentro do proxecto perooooo non poden estar na mesma carpeta que as fontes</span></strong></em>.</p>
+<p></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-6">
+<header class="nodeDecoration">
+<h1 id="exenode_6_Executarunhaproba" class="nodeTitle">Executar unha proba.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id6-6">
+<div class="iDevice emphasis0">
+<div id="ta6_86" class="block iDevice_content">
+<h3>Proba dun proxecto enteiro.</h3>
+<p>Varias opcións:</p>
+<ul>
+<li><span style="background-color: #ffcc99;"><strong>Selecciónase</strong> <strong>calquera nodo ou arquivo do proxecto</strong></span> na <strong>ventá de proxectos e <span style="background-color: #ffcc99;">Alt-F6</span>.</strong></li>
+<li><strong>Ou na de arquivos</strong> e <strong>elíxese no menú principal <span style="background-color: #ffcc99;">Ejecutar-&gt;Probar Project(nome_do_proxecto)</span>. </strong><em>Neste caso, se non temos escollido o proxecto, poderemos por o nome, pero se está escollido, xa sae o nome do mesmo.</em></li>
+</ul>
+<p><strong>O IDE executa tódolos métodos de proba do proxecto</strong>. <em>De querer executar un subconxunto das probas do proxecto ou executar as probas nun orden específico, debe crearse unha Test Suite que especifique as probas a executar</em>.</p>
+<p><img src="img0.2.png" width="754" height="404" alt="Execución da clase de proba dun proxecto." title="Execución da clase de proba dun proxecto." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h3>Proba dunha clase.</h3>
+<p><img src="img1.7.png" width="472" height="456" alt="Executar todos os casos de proba da clase." title="Executar todos os casos de proba da clase." style="float: right;" />Para <span style="background-color: #ffcc99;"><strong>executar a proba dunha clase</strong></span>, pódese elixir unha das<strong> dúas posibilidades</strong> seguintes:</p>
+<ul>
+<li>Selecciónase a clase na ventá de proxectos ou na de arquivos, <strong><span style="background-color: #ffcc99;">clic dereito e elíxese</span>, Probar archivo ou prémese <span style="background-color: #ffcc99;">Ctrl-F6</span></strong><span style="background-color: #ffcc99;">.</span></li>
+<li><strong>Selecciónase a proba da clase</strong> e elíxese no <strong>menú principal <span style="background-color: #ffcc99;">Ejecutar -&gt; Ejecutar archivo ou prémese Mayús-F6.</span></strong></li>
+</ul>
+<p>Pasos para <span style="background-color: #ffcc99;"><strong>executar un caso de proba</strong></span>:</p>
+<ol>
+<li>Execútase a proba que contén ese caso de proba.</li>
+<li>Na ventá de resultados faise <span style="background-color: #ffcc99;"><strong>clic dereito sobre o método ou premer sobre o trianguliño verde</strong></span> e elíxese <strong><span style="background-color: #ffcc99;">Run nomeMétodo da proba</span></strong>.</li>
+</ol>
+<p><img src="img2.9.png" width="688" height="150" alt="Executar un único caso de proba dunha clase/método." style="float: left;" title="Executar un único caso de proba dunha clase/método." /></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-11">
+<header class="nodeDecoration">
+<h1 id="exenode_11_Ventsdesadaderesultados" class="nodeTitle">Ventás de saída de resultados.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id10-11">
+<div class="iDevice emphasis0">
+<div id="ta10_85" class="block iDevice_content">
+<h3>Ventana Output.</h3>
+<p>A ventá de saída reflicte o detalle do proceso de execución das probas en formato texto.</p>
+<p><img src="img0.7.png" width="488" height="194" alt="Output de saída do test de probas." style="display: block; margin-left: auto; margin-right: auto;" title="Output de saída do test de probas." /></p>
+<h3>Ventana Test Results.</h3>
+<p>A ventá de resultados ten dúas zonas.</p>
+<ul>
+<li><strong>A zona da esquerda contén un resumo dos casos de proba</strong> superados e non superados e unha descrición deles en formato gráfico. Ao pasar o rato por riba da descrición dun método de proba, aparece nun recadro a saída correspondente a ese método.</li>
+<li><strong>A zona da dereita contén a saída textual</strong>.</li>
+</ul>
+<p><img src="img1.3.png" width="649" height="234" alt="Ventana Test Results." style="display: block; margin-left: auto; margin-right: auto;" title="Ventana Test Results." /></p>
+<p>Algunhas das iconas que se poden utilizar na ventá de resultados son:</p>
+<p><img src="img2.3.png" width="495" height="198" alt="Iconas da ventana Test Results." title="Iconas da ventana Test Results." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h2>Tipos de saídas posibles.</h2>
+<p><strong>Estas ventás cambian se non se supera algunha proba. </strong>Vemos que unha proba se realizou con éxito, outra fallou e outra causou un erro.</p>
+<p><strong><img src="img4.2.png" width="907" height="786" alt="Execución da clase DivisionTest con 3 probas." title="Execución da clase DivisionTest con 3 probas." style="display: block; margin-left: auto; margin-right: auto;" /></strong></p>
+<h3><strong></strong>Exemplo.</h3>
+<p>Ao executar un método de proba que espera un resultado 3 para o caso de proba 12/6, que é a terceira proba que se ve no código anterior, aprecerá na ventá de resultados o detalle sobre o caso de proba non superado.</p>
+<p><img src="img3.3.png" width="900" height="202" alt="Ventana ResultTest con probas non superadas." style="display: block; margin-left: auto; margin-right: auto;" title="Ventana ResultTest con probas non superadas." /></p>
+<p>Podemos ver con detalle que resultado produxo cada unha das probas:</p>
+<p><img src="img5.1.png" width="990" height="220" alt="Resultados das probas." style="display: block; margin-left: auto; margin-right: auto;" title="Resultados das probas." /></p>
+<p></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-14">
+<header class="nodeDecoration">
+<h1 id="exenode_14_Corrixindoprobas" class="nodeTitle">Corrixindo probas.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id13-14">
+<div class="iDevice emphasis0">
+<div id="ta13_86" class="block iDevice_content">
+<h2>Correximos as probas: ter en conta as excepcións e os erros nos datos da proba.</h2>
+<ul>
+<li>O <strong>fallo da proba da división por cero</strong> dase porque o meu caso de<span style="background-color: #ffcc99;"><strong> proba non tivo en conta a excepción lanzada no código</strong></span>. Para corrixir esto, hai que:
+<ol>
+<li>Empregar <span style="background-color: #ffcc99;"><strong>assertThrows</strong></span></li>
+<li><strong>Importar</strong> o paquete <strong><span style="background-color: #ffcc99;">org.junit.jupiter.api.function.Executable</span></strong></li>
+<li><strong>Reescribir</strong> a proba co aserto <strong>assertThrows</strong>. </li>
+<li style="list-style-type: none;"><img src="img2.10.png" width="548" height="103" alt="Aserto que xestiona a proba do lanzamento dunha excepción." title="Aserto que xestiona a proba do lanzamento dunha excepción." style="display: block; margin-left: auto; margin-right: auto;" /></li>
+</ol>
+</li>
+<li><strong>O erro da división entre 12/6</strong> porque estaba<strong> mal o caso de proba</strong>. Correximos os datos. </li>
+</ul>
+<h3>Exemplo de probas correxidas.</h3>
+<p>Tras as correccións a nosa clase DivisionTest quedaría así:</p>
+<h4>A cabeceira:</h4>
+<p style="text-align: center;"><img src="img0.9.png" width="465" height="482" alt="Cabeceira da clase DivisionTest." title="Cabeceira da clase DivisionTest." /></p>
+<h4 style="text-align: left;">Os test de proba:</h4>
+<p style="text-align: left;"><img src="img1.5.png" width="973" height="858" alt="Probas realizadas con éxito." style="display: block; margin-left: auto; margin-right: auto;" title="Probas realizadas con éxito." /></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-13">
+<header class="nodeDecoration">
+<h1 id="exenode_13_Asertos" class="nodeTitle">Asertos.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id11-13">
+<div class="iDevice emphasis0">
+<div id="ta11_85" class="block iDevice_content">
+<p>A clase <span style="background-color: #ffcc99;"><strong>Assert permite comprobar se a saída do método que se está probando concorda cos valores esperados</strong></span>.</p>
+<p>Pódese ver a sintaxe completa dos métodos asertos (afirmacións) que se poden usar para as probas en http://www.junit.org/apidocs/org/junit/Assert.html. Unha breve descrición deles é:</p>
+<ul style="line-height: 2em;">
+<li><strong>void assertEquals(valor esperado, valor actual, delta)</strong> é un método con sobrecarga para cada tipo en java e que permite comprobar se a chamada a un método devolve un valor esperado. No caso de valores reais ten un terceiro argumento para indicar o valor delta ou número real igual á máxima diferenza en valor absoluto entre o valor esperado e o actual para que a afirmación sexa un éxito.</li>
+<li><strong>void fail()</strong> para cando se espera que o programa falle. Utilízase cando a proba indica que hai un erro ou cando se espera que o método que se está probando chame a unha excepción.</li>
+<li><strong>void assertTrue(boolean)</strong> a proba é un éxito se a expresión booleana é certa.</li>
+<li><strong>void assertFalse(boolean)</strong> a proba é un éxito se a expresión booleana é falsa.</li>
+<li><strong>void assertNull(Object)</strong> a proba é un éxito se o obxecto é nulo.</li>
+<li><strong>void assertNotNull(Object)</strong> a proba é un éxito se o obxecto non é nulo.</li>
+<li><strong>void assertSame(Object,Object)</strong> a proba é un éxito se os dous obxectos son o mesmo.</li>
+<li><strong>void assertNotSame(Object,Object)</strong> a proba é un éxito se os dous obxectos non son o mesmo.</li>
+</ul>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-12">
+<header class="nodeDecoration">
+<h1 id="exenode_12_Anotacins" class="nodeTitle">Anotacións.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id12-12">
+<div class="iDevice emphasis0">
+<div id="ta12_85" class="block iDevice_content">
+<p>As anotacións <span style="background-color: #ffcc99;"><strong>aportan información sobre un programa</strong></span> e poden ser usadas:</p>
+<ul>
+<li>polo <strong>compilador</strong> (por exemplo: @Override-para informarlle que se está sobrescribindo un método, @Deprecated para indicarlle que está en desuso, @SupressWarnings para indicarlle que non avise de warnings ou advertencias),</li>
+<li>por <strong>ferramentas de software</strong> que as poden procesar (por exemplo para xerar código ou arquivos xml) ou</li>
+<li>para ser procesadas <strong>en tempo de execución</strong>.</li>
+</ul>
+<p>As anotacións <span style="background-color: #ffcc99;"><strong>poden aplicarse a declaracións de clases, campos, métodos e outros elementos dun programa</strong></span>.</p>
+<h3>@Ignore/@Disable e @Test.</h3>
+<p>As anotacións máis importantes nunha proba son<strong><span style="background-color: #ffcc99;"> @Ignore/@Disable</span></strong><em> (dependendo da versión de JUNIT) </em><strong>que serve para desactivar un test</strong> e colócase xusto antes de @Test, e @Test.</p>
+<p>A anotación <strong><span style="background-color: #ffcc99;">@Test</span> serve para anotar unha proba</strong>. Pode ter dous <strong>parámetros</strong> opcionais:</p>
+<ul>
+<li><em>expected  </em>define a clase de excepción que se espera que lance a proba para que sexa superada e</li>
+<li><em>timeout</em>  define os milisegundos que como máximo debe durar a execución para que a proba sexa superada.</li>
+</ul>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-2-node" id="exe-node-7">
+<header class="nodeDecoration">
+<h1 id="exenode_7_Exemplo" class="nodeTitle">Exemplo.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id7-7">
+<div class="iDevice emphasis0">
+<div id="ta7_86" class="block iDevice_content">
+<h2>Exemplo JUNIT dunha clase. Xerando a clase TestCoche.</h2>
+<p>Dado o seguinte código:</p>
+<p><img src="img0.4.png" width="719" height="458" alt="Código exemplo: clase Coche." title="Código exemplo: clase Coche." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Cando executamos a aplicación:</p>
+<p><img src="img1.png" width="567" height="743" alt="Resultado da execución da aplicación." style="display: block; margin-left: auto; margin-right: auto;" title="Resultado da execución da aplicación." /></p>
+<p>Agora imos engadir a clase para os test de proba deste método prezoFinal(desconto).</p>
+<p><img src="img2.png" width="732" height="590" alt="Lanzamos a execución de test unitarios de clase." title="Lanzamos a execución de test unitarios de clase." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Indicamos a clase e especificamos as probas, deixando as opcións por defecto se temos dúbidas:</p>
+<p><img src="img3.png" width="719" height="495" alt="Configuración da clase de probas da clase Coche." title="Configuración da clase de probas da clase Coche." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Cando o lanzamos crea a seguinte clase. Na parte esquerda da imaxe podemos ver onde creou a clase: un cartafol do proxecto.</p>
+<p><img src="img4.png" width="964" height="659" alt="Clase TestCoche creada automáticamente por JUNIT en Netbeans." style="display: block; margin-left: auto; margin-right: auto;" title="Clase TestCoche creada automáticamente por JUNIT en Netbeans." /></p>
+<p></p>
+<p></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-8">
+<header class="nodeDecoration">
+<h1 id="exenode_8_Aprimeiraproba" class="nodeTitle">A primeira proba.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id8-8">
+<div class="iDevice emphasis0">
+<div id="ta8_86" class="block iDevice_content">
+<p>Configuramos os valores da proba.</p>
+<p><img src="img0.5.png" width="659" height="274" alt="Proba do método prezoFinal()." title="Proba do método prezoFinal()." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Executamos a proba. Se queremos executar todo, premeríamos Alt+F6. Se queremos executar unha proba concreta, prememos sobre o trianguliño, e dámoslle a Run.</p>
+<p><img src="img1.1.png" width="727" height="271" alt="Executando a proba concreta." style="display: block; margin-left: auto; margin-right: auto;" title="Executando a proba concreta." /></p>
+<p>Resultado da execución na ventana Output:</p>
+<p><img src="img2.1.png" width="550" height="198" alt="Output dunha proba exitosa." title="Output dunha proba exitosa." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Tamén temos a ventana Test Results que podemos activar dende Window/IDE Tools/Test Results, vemos o resultado tamén:</p>
+<p><img src="img3.1.png" width="829" height="218" alt="Test Result da execución da proba do método prezoFinal()." style="display: block; margin-left: auto; margin-right: auto;" title="Test Result da execución da proba do método prezoFinal()." /></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-9">
+<header class="nodeDecoration">
+<h1 id="exenode_9_Engadindoprobas" class="nodeTitle">Engadindo probas.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id9-9">
+<div class="iDevice emphasis0">
+<div id="ta9_86" class="block iDevice_content">
+<h2>Outro caso de proba con valores distintos.</h2>
+<p>Engadimos un novo caso de proba incluíndo un novo método coa anotación @Test. Neste caso probamos o método para un vehículo que non teña dereito a desconto.</p>
+<p><img src="img0.6.png" width="733" height="544" alt="Nova proba do método: prezoFinal sen desconto." title="Nova proba do método: prezoFinal sen desconto." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Desta volta, executamos a clase TestCoche dende o menú contextual do proxecto.</p>
+<p><img src="img1.2.png" width="266" height="276" alt="Executar a clase TestCoche dende o menú contextual do proxecto." title="Executar a clase TestCoche dende o menú contextual do proxecto." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>O resultado da execución é o seguinte:</p>
+<p><img src="img2.2.png" width="835" height="195" alt="Resultado dos casos de proba." style="display: block; margin-left: auto; margin-right: auto;" title="Resultado dos casos de proba." /></p>
+<h2>Caso de proba da excepción.</h2>
+<p>No caso dunha excepción, o<strong> esqueleto do método de proba cambia</strong>...</p>
+<p><img src="img4.1.png" width="732" height="331" alt="Formato dun caso de proba dunha excepción." title="Formato dun caso de proba dunha excepción." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Vai dar erro, porque debmos <strong>importar  org.junit.jupiter.api.function.Executable</strong></p>
+<p><img src="img3.2.png" width="739" height="327" alt="Debemos importar org.junit.jupiter." title="Debemos importar org.junit.jupiter." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<p>Cando executamos, amósase o seguinte resultado:</p>
+<p><img src="img5.png" width="873" height="258" alt="Test results dos casos de proba descritos." title="Test results dos casos de proba descritos." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+</div>
+</div>
+</article>
+</article>
+<article class="node level-3-node" id="exe-node-10">
+<header class="nodeDecoration">
+<h1 id="exenode_10_Asanotacins" class="nodeTitle">As anotacións.</h1>
+</header>
+<article class="iDevice_wrapper FreeTextIdevice" id="id14-10">
+<div class="iDevice emphasis0">
+<div id="ta14_85" class="block iDevice_content">
+<h3>@BeforeAll: execútase 1 vez antes da proba da clase.</h3>
+<p>Neste exemplo aproveitamos o método setUpClass() para declarar o obxecto de tipo Coche (intance) que imos empregar en todas as probas,  e declaramos e unicializamos a constante imposto:</p>
+<p><img src="img0.10.png" width="376" height="90" alt="@BeforeAll" style="display: block; margin-left: auto; margin-right: auto;" title="@BeforeAll" /></p>
+<p>Esto <strong>afórranos liñas de código repetidas en todas as probas</strong>. Eso sí, <strong><em>cando cambian os valores do obxecto instance para a proba, teremos que modificalos</em>. </strong> Vese un exemplo deste caso, na segunda proba da imaxe (testPrezoFinalSenDesconto()).</p>
+<p><img src="img3.4.png" width="578" height="598" alt="Casos de proba modificados." title="Casos de proba modificados." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h3>@BeforeEach: execútase antes de cada caso de proba (@Test).</h3>
+<p>Neste exemplo sinxelo, imprimimos unha cabeceira para indicar que se executa un caso de proba a continuación. </p>
+<p><img src="img1.6.png" width="519" height="82" alt="@BeforeEach." title="@BeforeEach." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h3>@AfterEach: execútase despois de cada caso de proba (@Test).</h3>
+<p>Cada vez que rematamos a execución dun caso de proba, inserimos a hora na que rematou.</p>
+<p><img src="img2.7.png" width="852" height="73" alt="@AfterEach." title="@AfterEach." style="display: block; margin-left: auto; margin-right: auto;" /></p>
+<h3>Resultado da execución máis informado.</h3>
+<p><img src="img4.3.png" width="818" height="246" alt="Resultado da execución." style="display: block; margin-left: auto; margin-right: auto;" title="Resultado da execución." /></p>
+</div>
+</div>
+</article>
+</article>
+</section>
+<div id="packageLicense" class="cc cc-by-sa">
+<p><span>Obra publicada con</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Licencia Creative Commons Reconocimiento Compartir igual 4.0</a></p>
+</div>
+
+
+</div>
+<script type="text/javascript" src="_intef_js.js"></script></body>
+</html>
